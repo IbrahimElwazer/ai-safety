@@ -69,6 +69,7 @@
 							<p>Now that we have defined what an Artificial Neural Network is, we can explain what Deep Learning means. Deep Learning, as its name indicates, deals with a computer program’s ability to “learn” and improve through receiving large chunks of data for decision-making in many different ways. The “deep” in Deep Learning indicates the use of multiple layers in the Artificial Neural Network, which therefore allows the program to extract much more complex and sophisticated features, such as classifying an image as either showing a dog or a cat. The more layers there are in the ANN, the deeper the learning process is, and as a result the smarter and more complex the program is. This definition may sound very similar to Machine Learning, since the three terms Machine Learning, Artificial Neural Network, and Deep Learning are interlinked and are constantly being used together. Yet, it is important here to understand the hierarchy when mentioning these three terms. Artificial Neural Network (ANN) functions as the backbone of Deep Learning. Therefore, ANN is a subset of Deep Learning. Deep Learning is a subset of Machine Learning, and Machine Learning, at last, is a direct subfield of Artificial Intelligence of which all three terms fall under.</p>
 							<img src="images/difference-in-terms.jpg" alt="" width="600" height="300"/>
 							<br>
+							<br>
 							<p>Now that we have defined these three main terms, it is easy to follow along with the explanation on how computers “see” an image. Computer Vision uses Deep Learning techniques, which essentially relies on Artificial Neural Networks. There are many different types of Artificial Neural Network, and among them is what is known as the Convolutional Neural Network (CNN or ConvNet), which is what Computer Vision uses and what makes it so sophisticated and smart. CNN is a deep neural network, which means that it is an Artificial Neural Network with deep layers (multiple layers), that is why it is considered a Deep Learning approach. What make Convolutional Neural Networks so practical and special is that they do not need to have the classification features hard coded by the programmer or engineer. Rather, with enough training data being fed into the AI program, the CNN can learn to choose the most suitable features and characteristics in images of different categories, such as extracting the unique and most obvious features in a cat, a dog, a car, a human, a dolphin, a traffic light, a building, etc.</p>
 							<p>The entire process of how an image is taken in by the AI program and giving out a prediction as a result can be simplified and summarized into 4 main stages or steps:</p>
 								<ol>
@@ -77,16 +78,21 @@
 									<img src="images/classification.jpg" alt="" width="600" height="300"/>
 									<br>
 									<br>
+									<br>
 									<li>The CNN has various layers of neurons, as explained before, and each artificial neuron has a “weight” that is assigned to it which indicates its importance (the weight variable is a number between 0 and 1). Obviously, the higher the weight of a neuron the more important this neuron’s function and decision is for the rest of the process. Weights are initially put as random numbers (literally random numbers), in order for the AI program to adjust its weights all by itself by raising the weights of the neurons that affect the accuracy of the final decision and lowering the weights of those that are not as important (such as the unnecessary background areas of images in which a cat is sitting in a park for example). This adjusting of the weights improves the accuracy in finding the most important features and characteristic in an image. Along with the weights, another important variable is set between the connections of two neurons known as the “bias”, which delays the activation of neurons that are less important for the final decision. Both these variables play an essential role in the accuracy of the AI program’s decision-making.</li>
-									<img src="images/weights.jpg" alt="" width="500" height="300"/>
+									<img src="images/weights.jpg" alt="" width="500" height="400"/>
+									<br>
 									<br>
 									<br>
 									<li>Left alone for a period of time (usually hours), the CNN trains itself to become smarter and more accurate by using a trial and error process, by which the AI model compares its prediction with the actual answer known as the “ground truth”. Each time the CNN makes a decision, it compares its answer with the correct label of the image from the training data in order to calculate how accurate its prediction was. Based on how high or how low the prediction was (the prediction answer is a number ranging between 0 and 1 which indicates its percentage out of 100% when multiplied by 100), the CNN model adjusts its weights and biases to get a better result for the next image. This process of having the model go back and modify its own weights and biases is known as Backpropagation.</li>
+									<br>
 									<img src="images/backpropagation.jpg" alt="" width="500" height="400"/>
 								</ol> 
 								
 							<p>After having trained the CNN enough, the AI program is able to take in any new (unlabeled) image for making a decision. It is important to separate the training images from the new images, in order to test the actual accuracy of the program when it is given an image that it hasn’t seen before. Most importantly, the new images must be in the range of the categories and classifications of images that it was trained with. For example, if the CNN model was trained entirely with dog and cat images, it will definitely be unable to process an image of a laptop or anything other than a dog or cat. Therefore, it is important and essential to set a goal on what kind of images you want your AI program to be able to detect. Convolutional Neural Network lays at the core of every Computer Vision program used nowadays. This was a very brief and general explanation of how Convolutional Neural Networks function, just for the sake of simplicity.</p>
 							<img src="images/summary.jpg" alt="" width="700" height="200"/>
+							<br>
+							<br>
 							<b><h2>Different types of Computer Vision</h2></b>
 							<p>Computer Vision is no longer is a single topic, as more researchers, engineers, and scientists contributed to the development of it, it eventually grew larger to a point where Computer Vision now has 6 subcategories. Those are: </p>
 								<br>	
@@ -97,10 +103,12 @@
 									<img src="images/image-classification.jpg" alt="" width="600" height="300"/>
 									<br>
 									<br>
+									<br>
 									<h3>Object Detection</h3>
 									<li>Object Detection is a combination of two things: Image Classification, which we just explained, and what is known as Object Localization. Object Localization simply means to locate an object in an image by surrounding the detected object with a box to indicate that this is an object. Keep in mind, Object Localization only means locating an object, as in determining its position or location in an image, and not classifying it (categorizing the object). This is where Image Classification kicks in. When Image Classification and Object Localization go hand-in-hand together, we get Object Detection (also referred to as Object Recognition). Object Detection basically is a combination of the two, in which we first locate the object (or multiple objects in the same image) by surrounding it with a colored box, and secondly adding the classification to it by annotating the surrounding box with a text to indicate what this object that we have located is. This is another technique that self-driving cars use in order to “see” various different objects around it, each with a description (classification).</li>
 									<br>
 									<img src="images/object-detection.jpg" alt="" width="600" height="300"/>
+									<br>
 									<br>
 									<br>
 									<h3>Object Tracking</h3>
@@ -109,12 +117,16 @@
 									<img src="images/object-tracking.jpg" alt="" width="600" height="300"/>
 									<br>
 									<br>
+									<br>
 									<h3>Semantic Segmentation</h3>
 									<li>Semantic Segmentation is very similar to Object Detection, yet what makes Semantic Segmentation more professional is that instead of just drawing a simple square or rectangular box around the detected object, Semantic Segmentation draws the borders of the detector (the box) around the exact borders of the object. This means the box’s sides align with the object’s borders in order to clearly understand the shape of the detected object. The picture below shows the clear difference between Object Detection, which draws a box around the located object, and Semantic Segmentation, which allows the computer to understand where the borders and edges of all located objects are.</li>
 									<img src="images/semantic-segmentation.jpg" alt="" width="600" height="300"/>
+									<br>
+									<br>
+									<br>
 									<h3>Instance Segmentation</h3>
 									<li>Instance Segmentation is just a one-step more advanced approach to Semantic Segmentation. The main difference between Instance Segmentation and Semantic Segmentation is that in Semantic Segmentation, all the detected objects are treated as one object, therefore the computer sees all 4 persons as one person (one object), and that is why they are all colored by the AI program with the same color. Instance Segmentation solves this problem by handling each detected object as separate objects. As the example below shows, with the use of Instance Segmentation, the five persons in the image are each colored with a different color to handle each object as a separate one.</li>
-									<img src="images/instance-segmentation.jpg" alt="" width="600" height="300"/>
+									<img src="images/instance-segmentation.jpg" alt="" width="700" height="300"/>
 								</ol>
 						</div>
 					</div>
